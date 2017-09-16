@@ -10,6 +10,10 @@ li:hover {
   cursor: default;
 }
 
+.active {
+  border-bottom: 2px solid floralwhite;
+}
+
 h4 {
   color: #fff;
 }

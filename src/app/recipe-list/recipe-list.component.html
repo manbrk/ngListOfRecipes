@@ -1,6 +1,7 @@
 <ul class="list-unstyled">
   <li *ngFor="let recipe of recipes;"
-    (click)="OnSelected(recipe)">
+    (click)="OnSelected(recipe)"
+    [ngClass]="{active: isActive(recipe)}">
     <h4>{{ recipe.name }}</h4>
   </li>
 </ul>

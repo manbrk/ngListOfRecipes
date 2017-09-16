@@ -9,6 +9,7 @@ import {RecipeService} from '../recipe.service';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
+  selected: Recipe;
 
   constructor(private recipeService: RecipeService) { }
 
@@ -16,9 +17,14 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeService.getRecipes();
   }
 
-  OnSelected(recipe) {
+  OnSelected(recipe: Recipe) {
     this.recipeService.recipeSelected.emit(recipe);
+    this.selected = recipe;
     console.log(recipe);
+  }
+
+  isActive(recipe: Recipe) {
+    return this.selected === recipe;
   }
 
 }
