@@ -6,6 +6,7 @@ import {ClarityModule} from 'clarity-angular';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
+import {RecipeService} from './recipe.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
     BrowserModule,
     ClarityModule.forRoot()
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

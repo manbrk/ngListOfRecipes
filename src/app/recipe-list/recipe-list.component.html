@@ -1,11 +1,6 @@
 <ul class="list-unstyled">
-  <li><h4>Вкусный смузи</h4></li>
-  <li><h4>Милый маффин</h4></li>
-  <li><h4>Жижка клубничная</h4></li>
-  <li><h4>Вкусный смузи</h4></li>
-  <li><h4>Милый маффин</h4></li>
-  <li><h4>Жижка клубничная</h4></li>
-  <li><h4>Вкусный смузи</h4></li>
-  <li><h4>Милый маффин</h4></li>
-  <li><h4>Жижка клубничная</h4></li>
+  <li *ngFor="let recipe of recipes;"
+    (click)="OnSelected(recipe)">
+    <h4>{{ recipe.name }}</h4>
+  </li>
 </ul>
