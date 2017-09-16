@@ -19,5 +19,8 @@
 
 .first-panel h4 {
   color: #fff;
-  /*font-family: 'Raleway';*/
+}
+
+.second-panel p {
+  margin: 10px 0px 10px 0px;
 }

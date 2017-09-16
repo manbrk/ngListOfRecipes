@@ -96,7 +96,7 @@ body {
 }
 
 .content {
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .heading {
@@ -109,7 +109,7 @@ body {
 
 .description {
   /*font-family: 'Raleway', sans-serif;*/
-  font-weight: 400;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  /*font-weight: 400;*/
+  /*font-size: 0.9rem;*/
+  /*line-height: 1.5;*/
 }
