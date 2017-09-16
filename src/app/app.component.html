@@ -14,8 +14,17 @@
   </div>
   <div class="l-grid__item l-grid l-center-center second-panel">
     <div class="content">
-      <app-recipe-detail></app-recipe-detail>
-      <app-recipe-edit></app-recipe-edit>
+      <app-recipe-detail
+        *ngIf="selectedRecipe; else infoText"
+      [recipe]="selectedRecipe"></app-recipe-detail>
+      <ng-template #infoText>
+        <div class="center">
+          <h2>Выбери рецепт из списка</h2>
+          или
+          <button class="btn">добавь</button>
+        </div>
+        <app-recipe-edit></app-recipe-edit>
+      </ng-template>
     </div>
   </div>
 </div>
