@@ -1,0 +1,23 @@
+.second-panel .btn-group {
+  float: right;
+  margin: 0;
+}
+
+.first-panel li {
+  /*padding: 0 0 0 6em;*/
+  display: grid;
+  /*align-items: center;*/
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 1s;
+}
+
+.first-panel li:hover {
+  border-bottom: 2px solid floralwhite;
+  cursor: default;
+}
+
+.first-panel h4 {
+  color: #fff;
+  /*font-family: 'Raleway';*/
+}
