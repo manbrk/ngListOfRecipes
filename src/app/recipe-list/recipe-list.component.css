@@ -1,0 +1,15 @@
+li {
+  display: grid;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 1s;
+}
+
+li:hover {
+  border-bottom: 2px solid floralwhite;
+  cursor: default;
+}
+
+h4 {
+  color: #fff;
+}
