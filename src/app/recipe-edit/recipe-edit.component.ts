@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./recipe-edit.component.css']
 })
 export class RecipeEditComponent implements OnInit {
-  @Input() editMode: string;
+  @Input() modeSelected: string;
 
   constructor() { }
 

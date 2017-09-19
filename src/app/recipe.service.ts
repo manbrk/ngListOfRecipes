@@ -4,6 +4,7 @@ import {Recipe} from './recipe.model';
 @Injectable()
 export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
+  modeSelected = new EventEmitter<string>();
 
   dateCreated = new Date();
 

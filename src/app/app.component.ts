@@ -9,8 +9,7 @@ import {RecipeService} from './recipe.service';
 })
 export class AppComponent implements OnInit {
   selectedRecipe: Recipe;
-  title = 'app';
-  editMode: string;
+  selectedMode: string;
 
   constructor(private recipeService: RecipeService) {}
 
@@ -21,13 +20,20 @@ export class AppComponent implements OnInit {
           this.selectedRecipe = recipe;
         }
       );
+
+    this.recipeService.modeSelected
+      .subscribe(
+        (mode: string) => {
+          this.selectedMode = mode;
+        }
+      );
   }
 
   onAdd(selectedMode) {
-    this.editMode = selectedMode;
+    this.selectedMode = selectedMode;
   }
 
   onEdit(selectedMode) {
-    this.editMode = selectedMode;
+    this.selectedMode = selectedMode;
   }
 }

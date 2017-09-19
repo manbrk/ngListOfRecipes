@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Recipe} from '../recipe.model';
 import {RecipeService} from '../recipe.service';
 
@@ -10,7 +10,6 @@ import {RecipeService} from '../recipe.service';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
   selected: Recipe;
-  @Output() addMode = new EventEmitter<string>();
 
   constructor(private recipeService: RecipeService) { }
 
@@ -21,9 +20,7 @@ export class RecipeListComponent implements OnInit {
   OnSelected(recipe: Recipe) {
     this.recipeService.recipeSelected.emit(recipe);
     this.selected = recipe;
-    this.addMode.emit(null);
-
-    console.log(recipe);
+    this.recipeService.modeSelected.emit(null);
   }
 
   isActive(recipe: Recipe) {
@@ -31,7 +28,8 @@ export class RecipeListComponent implements OnInit {
   }
 
   onAdd(selectedMode) {
-    this.addMode.emit(selectedMode);
+    this.recipeService.modeSelected.emit(selectedMode);
+    console.log(this.recipeService.modeSelected);
   }
 
 }

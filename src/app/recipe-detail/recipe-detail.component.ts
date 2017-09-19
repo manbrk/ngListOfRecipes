@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Recipe} from '../recipe.model';
 import {RecipeService} from '../recipe.service';
 
@@ -9,8 +9,6 @@ import {RecipeService} from '../recipe.service';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Output() editMode = new EventEmitter<string>();
-
 
   constructor(private recipeService: RecipeService) { }
 
@@ -18,7 +16,7 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onEdit(selectedMode) {
-    this.editMode.emit(selectedMode);
+    this.recipeService.modeSelected.emit(selectedMode);
     console.log(selectedMode);
   }
 
