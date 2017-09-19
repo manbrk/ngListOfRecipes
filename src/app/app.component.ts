@@ -10,6 +10,7 @@ import {RecipeService} from './recipe.service';
 export class AppComponent implements OnInit {
   selectedRecipe: Recipe;
   title = 'app';
+  editMode: string;
 
   constructor(private recipeService: RecipeService) {}
 
@@ -20,5 +21,9 @@ export class AppComponent implements OnInit {
           this.selectedRecipe = recipe;
         }
       );
+  }
+
+  onAdd(selectedMode) {
+    this.editMode = selectedMode;
   }
 }

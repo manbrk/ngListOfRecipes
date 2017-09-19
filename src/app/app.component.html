@@ -6,25 +6,24 @@
   <div class="l-grid__item l-grid l-grid--gutter-large l-center-center first-panel">
     <div class="content">
       <h2 class="heading">Рецепты</h2>
-      <!--<p class="description">-->
-      <app-recipe-list></app-recipe-list>
-      <!--</p>-->
+      <app-recipe-list
+      (addMode)="onAdd($event)"></app-recipe-list>
     </div>
 
   </div>
   <div class="l-grid__item l-grid l-center-center second-panel">
     <div class="content">
       <app-recipe-detail
-        *ngIf="selectedRecipe; else infoText"
+        *ngIf="selectedRecipe && !editMode; else infoText"
       [recipe]="selectedRecipe"></app-recipe-detail>
       <ng-template #infoText>
         <div class="center">
           <h2>Выбери рецепт из списка</h2>
-          или
-          <button class="btn">добавь</button>
         </div>
-        <app-recipe-edit></app-recipe-edit>
       </ng-template>
+
+      <app-recipe-edit *ngIf="editMode === 'add'"></app-recipe-edit>
+
     </div>
   </div>
 </div>
