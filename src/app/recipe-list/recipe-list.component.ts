@@ -21,6 +21,8 @@ export class RecipeListComponent implements OnInit {
     this.recipeService.recipeSelected.emit(recipe);
     this.selected = recipe;
     this.recipeService.modeSelected.emit(null);
+
+    console.log(this.selected);
   }
 
   isActive(recipe: Recipe) {

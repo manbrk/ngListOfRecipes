@@ -44,4 +44,8 @@ export class RecipeEditComponent implements OnInit {
       this.recipeService.modeSelected.emit(null);
     }
   }
+
+  onCancel() {
+    this.recipeService.modeSelected.emit(null);
+  }
 }
