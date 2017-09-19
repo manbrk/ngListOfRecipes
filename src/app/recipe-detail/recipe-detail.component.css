@@ -6,3 +6,7 @@
 p {
   margin: 10px 0px 10px 0px;
 }
+
+.date-align-right {
+  text-align: right;
+}

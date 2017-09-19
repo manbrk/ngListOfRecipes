@@ -1,6 +1,6 @@
 <h2 class="heading">{{ recipe.name }}</h2>
 <p class="description">{{ recipe.content }}</p>
-<p class="p7">{{ recipe.dateCreated }}</p>
+<p class="p7 date-align-right">{{ recipe.dateCreated | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
 <div class="btn-group btn-outline-primary btn-sm">
   <button type="submit" class="btn" (click)="onEdit('edit')">редактировать</button>
   <button type="submit" class="btn" (click)="onDelete(recipe)">удалить</button>

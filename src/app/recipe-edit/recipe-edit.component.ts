@@ -36,7 +36,11 @@ export class RecipeEditComponent implements OnInit {
     }
 
     if (this.modeSelected === 'add') {
-      this.newRecipe = new Recipe(this.signupForm.value.name, this.signupForm.value.content, new Date(), []);
+      this.newRecipe = new Recipe(this.signupForm.value.name, this.signupForm.value.content, new Date(), [{
+        dateModify: new Date(),
+        name: this.signupForm.value.name,
+        content: this.signupForm.value.content
+      }]);
       this.recipeService.addRecipe(this.newRecipe);
 
       // go back to added recipe
