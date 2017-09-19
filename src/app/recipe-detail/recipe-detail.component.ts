@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Recipe} from '../recipe.model';
+import {RecipeService} from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -11,12 +12,17 @@ export class RecipeDetailComponent implements OnInit {
   @Output() editMode = new EventEmitter<string>();
 
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
   }
 
   onEdit(selectedMode) {
     this.editMode.emit(selectedMode);
+    console.log(selectedMode);
+  }
+
+  onDelete(recipe) {
+    this.recipeService.deleteRecipe(recipe);
   }
 }
