@@ -22,7 +22,8 @@
         </div>
       </ng-template>
 
-      <app-recipe-edit *ngIf="editMode === 'add'"></app-recipe-edit>
+      <app-recipe-edit *ngIf="editMode === 'add'"
+      [editMode]="editMode"></app-recipe-edit>
 
     </div>
   </div>

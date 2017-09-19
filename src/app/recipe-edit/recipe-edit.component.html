@@ -13,7 +13,8 @@
       </div>
     </div>
     <div class="btn-group btn-outline-primary btn-sm">
-      <button type="submit" class="btn">сохранить</button>
+      <button *ngIf="editMode === 'add'" type="submit" class="btn">добавить</button>
+      <button *ngIf="editMode === 'edit'" type="submit" class="btn">сохранить</button>
       <button type="submit" class="btn">отменить</button>
     </div>
   </section>
