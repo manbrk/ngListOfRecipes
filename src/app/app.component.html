@@ -22,6 +22,7 @@
       [modeSelected]="selectedMode"></app-recipe-edit>
 
       <app-recipe-edit *ngIf="selectedMode === 'edit'"
+      [recipe]="selectedRecipe"
       [modeSelected]="selectedMode"></app-recipe-edit>
 
     </div>

@@ -7,6 +7,7 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 import {RecipeService} from './recipe.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {RecipeService} from './recipe.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ClarityModule.forRoot()
   ],
   providers: [RecipeService],

@@ -29,7 +29,7 @@ export class RecipeListComponent implements OnInit {
 
   onAdd(selectedMode) {
     this.recipeService.modeSelected.emit(selectedMode);
-    console.log(this.recipeService.modeSelected);
+    this.selected = null;
   }
 
 }

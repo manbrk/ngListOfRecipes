@@ -28,9 +28,8 @@ export class RecipeService {
   deleteRecipe(recipe) {
     this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
-  //
-  // addRecipe(recipe: Recipe) {
-  //   this.recipes.push(recipe);
-  //   console.log('add button press');
-  // }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
 }

@@ -99,6 +99,10 @@ body {
   max-width: 400px;
 }
 
+.first-panel .content  {
+  max-width: 250px;
+}
+
 .heading {
   /*font-family: 'Playfair Display', serif;*/
   /*font-weight: 700;*/
