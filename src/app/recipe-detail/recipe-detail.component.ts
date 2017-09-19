@@ -22,5 +22,6 @@ export class RecipeDetailComponent implements OnInit {
 
   onDelete(recipe) {
     this.recipeService.deleteRecipe(recipe);
+    this.recipeService.recipeSelected.emit(null);
   }
 }
