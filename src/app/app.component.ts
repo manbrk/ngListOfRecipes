@@ -26,4 +26,8 @@ export class AppComponent implements OnInit {
   onAdd(selectedMode) {
     this.editMode = selectedMode;
   }
+
+  onEdit(selectedMode) {
+    this.editMode = selectedMode;
+  }
 }

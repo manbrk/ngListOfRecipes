@@ -14,15 +14,14 @@
   <div class="l-grid__item l-grid l-center-center second-panel">
     <div class="content">
       <app-recipe-detail
-        *ngIf="selectedRecipe && !editMode; else infoText"
-      [recipe]="selectedRecipe"></app-recipe-detail>
-      <ng-template #infoText>
-        <div class="center">
-          <h2>Выбери рецепт из списка</h2>
-        </div>
-      </ng-template>
+        *ngIf="selectedRecipe && !editMode"
+      [recipe]="selectedRecipe"
+      (editMode)="onEdit($event)"></app-recipe-detail>
 
       <app-recipe-edit *ngIf="editMode === 'add'"
+      [editMode]="editMode"></app-recipe-edit>
+
+      <app-recipe-edit *ngIf="editMode === 'edit'"
       [editMode]="editMode"></app-recipe-edit>
 
     </div>

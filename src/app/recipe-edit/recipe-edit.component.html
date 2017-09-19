@@ -1,6 +1,7 @@
 <form class="compact">
   <section class="form-block">
-    <label>Добавить Рецепт</label>
+    <label *ngIf="editMode === 'add'">Добавить Рецепт</label>
+    <label *ngIf="editMode === 'edit'">Редактировать Рецепт</label>
 
     <div class="form-group row">
       <div class="col-xs-12">
