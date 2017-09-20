@@ -3,6 +3,7 @@ li {
   justify-content: center;
   border-bottom: 2px solid transparent;
   transition: border-bottom 1s;
+  text-transform: capitalize;
 }
 
 li:hover {

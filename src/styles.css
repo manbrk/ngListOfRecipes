@@ -112,6 +112,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  text-transform: capitalize;
 }
 
 .description {
