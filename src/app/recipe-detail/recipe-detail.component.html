@@ -2,6 +2,24 @@
 <p class="description">{{ recipe.content }}</p>
 <p class="p7 date-align-right">{{ recipe.dateCreated | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
 <div class="btn-group btn-outline-primary btn-sm">
-  <button type="submit" class="btn" (click)="onEdit('edit')">редактировать</button>
-  <button type="submit" class="btn" (click)="onDelete(recipe)">удалить</button>
+  <button class="btn" (click)="onEdit('edit')">редактировать</button>
+  <button class="btn" (click)="onVersion()" *ngIf="recipe.versions.length > 0">правки</button>
+  <button class="btn" (click)="onDelete(recipe)">удалить</button>
 </div>
+
+<table class="table" *ngIf="version && recipe.versions.length > 0">
+  <thead>
+  <tr>
+    <th class="left">Название</th>
+    <th>Дата</th>
+    <th class="left">Рецепт</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let version of recipe.versions">
+    <td class="left">{{ version.name }}</td>
+    <td><span class="date">{{ version.dateModify | date: 'dd/MM/yyyy HH:mm:ss' }}</span></td>
+    <td class="left">{{ version.content }}</td>
+  </tr>
+  </tbody>
+</table>

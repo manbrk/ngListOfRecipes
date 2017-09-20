@@ -3,10 +3,28 @@
   margin: 25px 0 0 0;
 }
 
+button {
+  float: right;
+}
+
 p {
   margin: 10px 0px 10px 0px;
 }
 
 .date-align-right {
   text-align: right;
+}
+
+.version {
+  margin-top: 70px;
+}
+
+.date {
+  /*color: #565656;*/
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.table {
+  margin-top: 70px;
 }

@@ -9,6 +9,7 @@ import {RecipeService} from '../recipe.service';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
+  version = false;
 
   constructor(private recipeService: RecipeService) { }
 
@@ -23,5 +24,9 @@ export class RecipeDetailComponent implements OnInit {
   onDelete(recipe) {
     this.recipeService.deleteRecipe(recipe);
     this.recipeService.recipeSelected.emit(null);
+  }
+
+  onVersion() {
+    this.version = ! this.version;
   }
 }
