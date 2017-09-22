@@ -30,7 +30,6 @@ export class RecipeEditComponent implements OnInit {
         content: this.signupForm.value.content
       });
 
-      // go back to edited recipe
       this.recipeService.recipeSelected.emit(this.recipe);
       this.recipeService.modeSelected.emit(null);
     }
@@ -43,7 +42,6 @@ export class RecipeEditComponent implements OnInit {
       }]);
       this.recipeService.addRecipe(this.newRecipe);
 
-      // go back to added recipe
       this.recipeService.recipeSelected.emit(this.newRecipe);
       this.recipeService.modeSelected.emit(null);
     }
